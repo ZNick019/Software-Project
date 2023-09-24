@@ -9,18 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>JOES CAFE</title>
-  
+<style type="text/tailwindcss">
+    @layer utilities{
+
+    .categories{
+        @apply relative border
+    }
+    .categories::after{
+        @apply content-[''] bg-pink-500 h-[3px] w-[0px] left-0 absolute bottom-0 rounded-xl    
+    }
+    .categories:active::after{
+        @apply w-[108px]
+    }
+
+    }
+
+</style>
 
 <style>
     *{
     margin:0;
     padding: 0;
     }
-    li #categories{
+    @layer utilities{
+    li .categories{
         line-height: 50px;
         margin-left: 20px;
         margin-right: 20px;
         line-height: 2px;
+
+    }
     }
     li p{
         font-family: 'Alata', sans-serif;
@@ -56,34 +74,40 @@
     <img class="absolute top-[-10px] max-w-[200px] overflow-x-auto" src="img/Joes-Logo-Whitebg.png"> 
     </div>
 
-    <div class="max-w-full h-screen bg-[rgba(33,29,28,1)]">
-    <div class="relative max-w-full h-40">
-        <ul class="absolute bottom-0 flex md:justify-around w-full gap-10 pl-5 overflow-x-auto">
-            <li id="categories" class="min-w-[130px]">
+    <div class="max-w-full bg-[rgba(33,29,28,1)]">
+    <div class="relative max-w-full h-40 border">
+        
+        <ul class="absolute flex justify-evenly bottom-0 md:justify-around w-full gap-10 overflow-x-auto border">
+            <button class="categories">
+            <li>
                 <p>ALL ITEMS</p>     
             </li>
-            <li id="categories" class="min-w-[130px]">
-                <p>SNACKS</p>   
-            </li>
-            <li id="categories" class="min-w-[130px]">
-                <p>ICED JOE</p>     
-            </li>
-            <li id="categories" class="min-w-[130px]">
-                <p>HOT JOE</p>     
-            </li>
-            <li id="categories" class="min-w-[130px]">
-                <p>FRAPPE</p>    
-            </li>
-            <li id="categories" class="min-w-[130px]">
-                <p>SMOOTHIES</p>    
-            </li>
-            
+            </button>
+            <button class="categories">
+                <li>
+                    <p>SNACKS</p>     
+                </li>
+            </button>
+            <button class="categories">
+                <li>
+                    <p>ICED JOE</p>     
+                </li>
+            </button>
+            <button class="categories">
+                <li>
+                    <p>HOT JOE</p>     
+                </li>
+            </button>
             
         </ul>
+     
         <div class="absolute w-full bottom-0 opacity-5 border"></div>
     </div>
+    </div>
+
 
     <!--CATEGORIES-->
+    <div class="max-w-full h-screen bg-[rgba(33,29,28,1)]">
     <div class="grid grid-cols-1 w-full">
         <div class="max-w-full mt-2 bg-[rgba(33,29,28,1)]">
         <section class="flex flex-wrap justify-between items-center max-w-full mx-auto px-10 h-[100px]">

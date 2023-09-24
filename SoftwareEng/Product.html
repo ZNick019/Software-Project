@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/thabit" type="text/css"/>
+    <title>JOES COFFEE</title>
+</head>
+<style type="text/tailwindcss">
+    @layer utilities{
+  
+    .categories p{
+        @apply relative min-w-[250px] hover:text-white tracking-[1px];
+    }
+    .categories p::after{
+        @apply content-[''] bg-pink-500 w-0 h-[5px] rounded-xl left-0 bottom-0 absolute duration-300;
+    }
+    .categories p:hover:after{
+        @apply w-full; 
+    }
+  }
+
+  @layer components{
+
+  }
+
+  .scrollbar-hide::-webkit-scrollbar{
+    display:none;
+  }
+</style>
+
+<body class="bg-[rgba(33,29,28,1)]">
+    <header class="relative w-full h-20 bg-[rgba(46,42,41,1)]" id="header">
+        <div class="absolute w-[125px] min-w-[500px]:w-[200px] sm:w-[250px] lg:w-[400px] xl:w-[600px] border-2 bottom-0 left-0 rounded-r-xl border-[#FFD5AD]"></div>
+            <div class="flex w-full h-full">
+                 <div class="w-[600px]">
+         <!--BACK NOT DONE YET-->
+                </div>
+                <div class="relative flex justify-end w-full">
+                    <button class="absolute bottom-3 hover:opacity-[0.9]"><img class="w-[145px] sm:w-[200px] max-[640px]:hidden lg:w-[250px] lg:right-5 pl-5 pr-2 pt-2 object-cover bg-no-repeat" src="images/Coffee Basket.png"></button>
+                    <button class="absolute bottom-3 right-3 hover:opacity-[0.9]"><img class="w-[80px] sm:hidden pl-5 pr-2 pt-2 object-cover bg-no-repeat" src="images/Coffee Basket Mobile.png"></button>
+                </div>
+            </div>
+        <div class="absolute w-[125px] sm:w-[250px] lg:w-[400px] xl:w-[600px] border-2 bottom-0 right-0 rounded-l-xl border-[#FFD5AD]"></div>
+    </header>
+    <!--ABSOLUTE ICON-->
+    <div class="flex justify-center">
+        <img class="absolute top-3 sm:-top-3 lg:-top-5 xl:-top-7 w-32 sm:w-52 lg:w-60 xl:w-64 overflow-x-auto z-20 object-cover" src="images/Joes-Logo-Whitebg.png"> 
+    </div>
+
+    <!--CATEGORIES SELECTION-->
+
+    <section class="w-full h-[100%] bg-[rgba(33,29,28,1)]">
+        <button class="fixed bottom-10 right-2 w-12 h-12 sm:hidden"><a href="#header"><img src="images/up-arrow.png"></a></button>
+
+        <!--CATEGORY HEADER-->
+        <div class="sticky top-0 w-full h-32 sm:h-48 bg-[rgba(33,29,28,1)] drop-shadow-[0px_10px_10px_rgba(0,0,0,0.4)]">
+            <div class="absolute bottom-0 max-w-full">
+                <div class="flex gap-5 overflow-x-auto scrollbar-hide">
+
+                    <div class="relative pr-52 ml-5 w-24 h-10 rounded-xl max-[640px]:hidden">
+                        <input type="search" placeholder="Search" class="absolute items-center font-['ThabitRegular'] text-[#000000] pl-2 h-full rounded-xl w-full bg-[#FFFFFF]">                      
+                        <div class="absolute flex justify-center items-center right-0 w-12 h-full bg-[#F9EBD3] rounded-r-xl"><img class="w-8" src="images/search.png"></div>
+                    </div>  
+
+                    <div class="relative pr-12 bottom-0 rounded-r-xl border-white bg-[#F9EDB3] sm:hidden">
+                        <button class="absolute"><img class="w-20" src="images/search.png"></button>
+                    </div>
+                       
+                 
+
+                    <button class="categories"><a link href="#btn_popular"><p>POPULAR</p></a></button>
+                    <button class="categories"><a link href="#btn_snacks"><p>SNACKS</p></a></button>
+                    <button class="categories"><a link href="#btn_icejoe"><p>ICE JOE</p></a></button>
+                    <button class="categories"><a link href="#btn_hotjoe"><p>HOT JOE</p></a></button>
+                    <button class="categories"><a link href="#btn_milktea"><p>Milktea</p></a></button>
+                    <button class="categories"><a link href="#btn_fruittea"><p>FruitTea</p></a></button>
+                    <button class="categories"><a link href="#btn_food"><p>Food</p></a></button>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="w-full h-full mt-10 bg-[rgba(33,29,28,1)]">
+            
+            <!--POPULARITY-->
+            <div class="w-full mt-10 top-5">
+                <div class="flex justify-center items-center w-full">
+                    <h1 class="text-[45px]" id="btn_popular">POPULAR</h1>
+                </div>
+                
+               
+                <div class="flex flex-wrap w-full justify-center items-center gap-5 pt-5 pb-5">
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                            <div class="flex justify-center item-center w-full h-52">
+                                <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                            </div>
+                            <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                            <div class="w-[180px] pl-5">
+                                <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                            </div>
+                            <div class="w-[100%] pl-12 row-span-2">
+                                <button><img class="w-10" src="images/Add Button.png"></button>
+                            </div>
+                            <div class="w-[180px] pl-5">
+                                <p class="description text-[#D4B797]">PHP 170.00</p>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>          
+                    </div>   
+                   
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                </div>      
+            </div>         
+
+            <!--CATEGORIES 2-->
+            <div class="w-full mt-10 top-5">
+                <div class="flex justify-center items-center w-full">
+                    <h1 class="text-[45px]" id="btn_snacks">SNACKS</h1>
+                </div>
+                
+               
+                <div class="flex flex-wrap w-full justify-center items-center gap-5 pt-5 pb-5">
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                            <div class="flex justify-center item-center w-full h-52">
+                                <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                            </div>
+                            <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                            <div class="w-[180px] pl-5">
+                                <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                            </div>
+                            <div class="w-[100%] pl-12 row-span-2">
+                                <button><img class="w-10" src="images/Add Button.png"></button>
+                            </div>
+                            <div class="w-[180px] pl-5">
+                                <p class="description text-[#D4B797]">PHP 170.00</p>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>          
+                    </div>   
+                   
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                </div>      
+            </div>       
+
+
+            <!--CATEGORIES 3-->
+
+            <div class="w-full  mt-10 top-5">
+                <div class="flex justify-center items-center w-full">
+                    <h1 class="text-[45px]" id="btn_icejoe">ICE JOE</h1>
+                </div>
+                
+               
+                <div class="flex flex-wrap w-full justify-center items-center gap-5 pt-5 pb-5">
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                            <div class="flex justify-center item-center w-full h-52">
+                                <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                            </div>
+                            <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                            <div class="w-[180px] pl-5">
+                                <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                            </div>
+                            <div class="w-[100%] pl-12 row-span-2">
+                                <button><img class="w-10" src="images/Add Button.png"></button>
+                            </div>
+                            <div class="w-[180px] pl-5">
+                                <p class="description text-[#D4B797]">PHP 170.00</p>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>          
+                    </div>   
+                   
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                </div>      
+            </div> 
+            
+            
+            <!--CATEGORIES 3-->
+
+            <div class="w-full  mt-10 top-5">
+                <div class="flex justify-center items-center w-full">
+                    <h1 class="text-[45px]" id="btn_hotjoe">HOT JOE</h1>
+                </div>
+                
+               
+                <div class="flex flex-wrap w-full justify-center items-center gap-5 pt-5 pb-5">
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                            <div class="flex justify-center item-center w-full h-52">
+                                <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                            </div>
+                            <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                            <div class="w-[180px] pl-5">
+                                <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                            </div>
+                            <div class="w-[100%] pl-12 row-span-2">
+                                <button><img class="w-10" src="images/Add Button.png"></button>
+                            </div>
+                            <div class="w-[180px] pl-5">
+                                <p class="description text-[#D4B797]">PHP 170.00</p>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>          
+                    </div>   
+                   
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="w-60 h-72 bg-[#463C3A] rounded-lg">
+                        <div class="flex justify-center item-center w-full h-52">
+                            <img class="w-52 object-cover pt-2 pb-2 rounded-xl" src="images/Category Image.png">
+                        </div>
+                        <div class="grid grid-rows-2 grid-cols-2 w-full h-20">
+                        <div class="w-[180px] pl-5">
+                            <p class="description bottom-0 font-bold text-[20px]">ICED COFFEE</p>
+                        </div>
+                        <div class="w-[100%] pl-12 row-span-2">
+                            <button><img class="w-10" src="images/Add Button.png"></button>
+                        </div>
+                        <div class="w-[180px] pl-5">
+                            <p class="description text-[#D4B797]">PHP 170.00</p>
+                        </div>
+                    </div>
+                    </div>   
+                </div>      
+            </div> 
+        </div>
+
+        
+
+    </section>
+    <script src="JavaScript/Product.js"></script>
+</body>
+</html>
