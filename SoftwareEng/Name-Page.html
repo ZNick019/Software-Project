@@ -26,19 +26,32 @@ button p,p,label{
 .name{
  color: black;
 }
+.box{
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: white;
+    z-index: 1;
+    mix-blend-mode: soft-light;
+}
 </style>
 </head>
 <body>
     <div class="relative flex justify-center items-center bg-gradient-to-t from-[#E7D6B8] to-[#D2B48C] h-screen bg-no-repeat ">
-       
-        <div class="absolute z-20 top-20">
-            <img class="w-52 drop-shadow-[0px_3px_2px_rgba(0,0,0,0.2)]"src="images/Joes-Logo-Whitebg.png">
+ 
+        <div class="box">
+            <div class="absolute flex justify-center w-full select-none z-20">
+                <img class="absolute -top-36 w-64 object-cover " src="images/Joes-Logo-Whitebg.png"> 
+            </div>
         </div>
-        
-        <div class="w-80 h-80 bg-white mix-blend-soft-light drop-shadow-[0px_10px_6px_rgba(0,0,0,0.5)] rounded-xl"></div>
 
-
-        <div class="absolute w-80 h-80 flex justify-center items-center">
+        <div class="absolute w-80 h-80 flex justify-center items-center select-none z-10">
             <div class="relative w-full h-60 flex justify-center items-center">
                 <p class="name absolute top-16">WHAT SHOULD WE CALL YOU?</p>
                 <form class="relative flex w-72 pt-10">    
