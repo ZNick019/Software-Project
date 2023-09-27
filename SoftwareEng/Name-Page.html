@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+<style>
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label{
+    top: -0.5rem;
+   background-color: rgb(243, 229, 213);
+
+}
+label{
+    color:#664229;
+    transition: top 200ms ease-in, left 200ms ease-in;
+}
+button p,p,label{
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+}
+.name{
+ color: black;
+}
+</style>
+</head>
+<body>
+    <div class="relative flex justify-center items-center bg-gradient-to-t from-[#E7D6B8] to-[#D2B48C] h-screen bg-no-repeat ">
+       
+        <div class="absolute z-20 top-20">
+            <img class="w-52 drop-shadow-[0px_3px_2px_rgba(0,0,0,0.2)]"src="images/Joes-Logo-Whitebg.png">
+        </div>
+        
+        <div class="w-80 h-80 bg-white mix-blend-soft-light drop-shadow-[0px_10px_6px_rgba(0,0,0,0.5)] rounded-xl"></div>
+
+
+        <div class="absolute w-80 h-80 flex justify-center items-center">
+            <div class="relative w-full h-60 flex justify-center items-center">
+                <p class="name absolute top-16">WHAT SHOULD WE CALL YOU?</p>
+                <form class="relative flex w-72 pt-10">    
+                    <div class="relative flex flex-row w-full h-12 border rounded-l-xl rounded-r-md">
+                        <input type="text" class="absolute h-10 rounded-md font-['Zilla Slab'] p-2 border-[2px] border-solid border-[#664229]" style="background:none;" placeholder=" ">
+                        <button class="absolute right-0 bg-[#664229] w-24 h-10 rounded-md flex justify-center items-center text-white"><p>CONFIRM</p></button>
+                        <label class="absolute text-[14px] left-2 top-2 cursor-text select-none ">NAME</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+

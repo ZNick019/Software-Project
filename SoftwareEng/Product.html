@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="JavaScript/cart.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
-   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/thabit" type="text/css"/>
+
     <title>JOES COFFEE</title>
 </head>
 <style type="text/tailwindcss">
@@ -66,14 +68,12 @@
 
                     <div class="relative pr-52 ml-5 w-24 h-10 rounded-xl max-[640px]:hidden">
                         <input type="search" placeholder="Search" class="absolute items-center font-['ThabitRegular'] text-[#000000] pl-2 h-full rounded-xl w-full bg-[#FFFFFF]">                      
-                        <div class="absolute flex justify-center items-center right-0 w-12 h-full bg-[#F9EBD3] rounded-r-xl"><img class="w-8" src="images/search.png"></div>
+                        <div class="absolute flex justify-center items-center right-0 h-full bg-[#F9EBD3] rounded-r-xl"><img class="w-8" src="images/search.png"></div>
                     </div>  
 
                     <div class="relative pr-12 bottom-0 rounded-r-xl border-white bg-[#F9EDB3] sm:hidden">
                         <button class="absolute"><img class="w-20" src="images/search.png"></button>
-                    </div>
-                       
-                 
+                    </div>   
 
                     <button class="categories"><a link href="#btn_popular"><p>POPULAR</p></a></button>
                     <button class="categories"><a link href="#btn_snacks"><p>SNACKS</p></a></button>
@@ -92,10 +92,9 @@
 
 
         <div class="w-full h-full mt-10 bg-[rgba(33,29,28,1)]">
-            
             <!--POPULARITY-->
             <div class="w-full mt-10 top-5">
-                <div class="flex justify-center items-center w-full">
+                <div class="flex justify-center items-center w-full ">
                     <h1 class="text-[45px]" id="btn_popular">POPULAR</h1>
                 </div>
                 

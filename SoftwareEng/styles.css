@@ -538,7 +538,11 @@ video {
 html{
   scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding, 12rem);
+
 }
+
+
+
 button p{
   font-family: 'Alata', sans-serif;
   font-family: 'Bebas Neue', sans-serif;

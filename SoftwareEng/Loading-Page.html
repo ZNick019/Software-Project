@@ -2,19 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3;url=Name-Page.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <title>JOE'S CAFE</title>
 <style>
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-reverse{
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+}
+img{
+    animation: rotate 25s linear infinite
+}
+
+.plate{
+    animation: rotate-reverse 5000s linear infinite
+}
 
 </style>
 </head>
-<body class="bg-gradient-to-t from-[#E7D6B8] to-[#D2B48C] h-screen">
-    <div class="flex justify-center items-center w-full h-full">
-        
+<body>
+   <div class="bg-gradient-to-t from-[#E7D6B8] to-[#D2B48C] min-h-screen bg-no-repeat">
+    <div class="flex justify-center items-center w-full h-screen">
+        <div class="flex flex-col justify-center items-center w-80 h-96">
+            <div class="plate border rounded-full bg-white w-64 h-64 mb-10 drop-shadow-[1px_3px_1px_rgba(0,0,0,0.2)] select-none">
+                <img class="drop-shadow-[1px_6px_1px_rgba(0,0,0,0.2)] object-cover select-none"src="images/Joes-Logo-Whitebg.png">             
+            </div>
+            <div class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 
+        </div>
     </div>
+   </div>
+
 
 </body>
 </html>
